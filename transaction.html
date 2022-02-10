@@ -10,40 +10,48 @@
 <body>
      <main class="mx-auto">
           <h1 class="text-3xl text-center mt-8 font-semibold">Welcome to <span class="text-4xl text-fuchsia-600">Bank Asia.</span></h1>
-             <div class="grid grid-cols-3 gap-4 mt-8 container mx-auto">
+             <div class="grid grid-cols-3 gap-4 mt-8 container mx-auto p-2">
                <div class="border rounded px-2 py-2 bg-green-200 flex justify-center">
                     <div>
-                    <h2 class="text-xl font-bold">Deposit</h2>
-                    <h3 class="text-3xl font-semibold">$ <span>00</span></h3>
+                    <h2 class="text-xl font-semibold">Deposit</h2>
+                    <h3 class="text-2xl font-semibold">$ <span id="currentDeposit">00</span></h3>
                     </div>
                </div>
                <div class="border rounded px-2 py-2 bg-teal-200 flex justify-center">
                    <div>
-                    <h2 class="text-xl font-bold">Withdraw</h2>
-                    <h3 class="text-3xl font-semibold">$ <span>00</span></h3>
+                    <h2 class="text-xl font-semibold">Withdraw</h2>
+                    <h3 class="text-2xl font-semibold">$ <span id="currentWithdraw">00</span></h3>
                    </div>
                </div>
                <div class="border rounded px-2 py-2 bg-sky-300 flex justify-center">
                     <div>
-                         <h2 class="text-xl font-bold">Balance</h2>
-                    <h3 class="text-3xl font-semibold">$ <span>00</span></h3>
+                         <h2 class="text-xl font-semibold">Balance</h2>
+                    <h3 class="text-2xl font-semibold">$ <span id="currentBalance">1142</span></h3>
                     </div>
                </div>
              </div>
              <br><br><br>
-             <div class="grid grid-cols-2 gap-4 mt-8 container mx-auto">
-               <div class="container mx-auto shadow p-3">
+             <div class="grid grid-rows-2 md:grid-cols-2 gap-4 container mx-auto p-5">
+               <div class="flex justify-center shadow p-3 bg-violet-300 rounded-b-lg">
+                   <div>
                     <h2 class="text-3xl">Deposit Amount</h2>
-                    <input class="border rounded px-2 py-2 mt-3" type="text" placeholder="Enter deposit amount">
-                    <button class="block rounded border mt-2 py-1 px-2 bg-lime-400">Deposit</button>
+                    <input id="input-deposit" class="border rounded px-2 py-2 mt-3" type="text" placeholder="Enter deposit amount">
+                    <div class="flex justify-center">
+                         <button id="deposit-btn" class="block rounded border mt-2 py-1 px-2 bg-lime-400">Deposit</button>
+                    </div>
+                   </div>
                </div>
-               <div class="container mx-auto shadow p-3">
+               <div class="flex justify-center shadow p-3 bg-violet-300 rounded-b-lg">
+                    <div>
                     <h2 class="text-3xl">Withdraw Amount</h2>
-                    <input class="border rounded px-2 py-2 mt-3" type="text" placeholder="Enter withdraw amount">
-                    <button class="block rounded border mt-2 py-1 px-2 bg-lime-400">Withdraw</button>
+                    <input  id="input-withdraw" class="border rounded px-2 py-2 mt-3" type="text" placeholder="Enter withdraw amount">
+                    <div class="flex justify-center">
+                         <button id="withdraw-btn" class="block rounded border mt-2 py-1 px-2 bg-lime-400">Withdraw</button>
+                    </div>
+                    </div>
                </div>
              </div>
-            
      </main> 
+     <script src="./js/transaction.js"></script>
 </body>
 </html>
